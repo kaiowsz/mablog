@@ -1,7 +1,9 @@
 import { groq } from "next-sanity";
 import React from "react"
+import {RichTextComponents} from "../../../../components/RichTextComponents";
 import { client } from "../../../../lib/sanity.client";
 import { urlFor } from "../../../../lib/urlFor";
+import { PortableText } from "@portabletext/react";
 
 type Props = {
     params: {
@@ -66,12 +68,16 @@ async function Post({params: {slug}}: Props) {
                                 {post.categories.map((category) => (
                                     <p key={category._id} className="bg-gray-800 text-white px-3 py-1 rounded-full text-sm font-semibold mt-4">{category.title}</p>
                                 ))}
-                            </div>
+                            </div> 
                         </div>
                     </section>
 
                 </div>
             </section>
+
+            <PortableText 
+            value={post.body} 
+            components={RichTextComponents} />
         </article>
     )
 }
