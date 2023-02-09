@@ -5,8 +5,8 @@ import {schemaTypes} from './schemas'
 import { myTheme } from './theme'
 import { getDefaultDocumentNode } from './structure'
 
-const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
-const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET
+const projectId = "jo41sjfw"
+const dataset = "production"
 
 export default defineConfig({
   basePath: "/studio",

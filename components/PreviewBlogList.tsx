@@ -9,7 +9,6 @@ type Props = {
 
 function PreviewBlogList({query}: Props) {
     const posts = usePreview(null, query)
-    console.log("Loading posts...", posts)
 
   return (
     <BlogList posts={posts}  />
